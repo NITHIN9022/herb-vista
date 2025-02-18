@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome file link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Herbvista</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- logo name  -->
+        <a href="#" class="logo"><i class="fas fa-tree"></i>HERBVISTA</a>
+
+        <!-- navbar icons  -->
+        <div class="fas fa-bars"></div>
+        <!-- navbar link  -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="https://plant.id/">Identify</a></li>
+                <li><a href="https://herbcommunity.netlify.app/">Community</a></li>
+                <li><a href="streak.html">Streak</a></li>
+                <li><a href="exercise.html">Fitness</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <!-- home section start  -->
+
+    <section id="home" class="home">
+
+      
+
+      
+
+
+    <!-- home section end  -->
+
+   
+
+  
+      <div class="container">
+        <h1>Photo Upload Streak Tracker</h1>
+        <div class="streak-section">
+          <p>Your current streak: <span id="streak-count">0</span> days</p>
+        </div>
+        <form id="photo-form">
+          <label for="photo-upload" class="upload-label">Upload a Photo</label>
+          <input type="file" id="photo-upload" accept="image/*" />
+        </form>
+        <div id="uploaded-photo-preview" class="photo-preview">
+          <p>No photo uploaded yet.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1>Dashboard</h1>
+        <nav>
+          <a href="index.html" class="nav-link">Back to Streak Tracker</a>
+        </nav>
+        <div class="dashboard">
+          <p>Current Streak: <span id="current-streak">0</span> days</p>
+          <p>Total Photos Uploaded: <span id="total-uploads">0</span></p>
+          <canvas id="streak-chart" width="400" height="200"></canvas>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1>Competitor Dashboard</h1>
+    
+        <!-- Competitor Selector -->
+        <div class="filters">
+          <label for="competitor-select">Select Competitor:</label>
+          <select id="competitor-select">
+            <option value="competitor1">Competitor 1</option>
+            <option value="competitor2">Competitor 2</option>
+            <option value="competitor3">Competitor 3</option>
+          </select>
+        </div>
+    
+        <!-- Key Metrics -->
+        <div class="metrics">
+          <h2>Key Metrics</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody id="metrics-table">
+              <!-- Metrics will be populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+    
+        <!-- Charts -->
+        <div class="charts">
+          <h2>Performance Trends</h2>
+          <canvas id="traffic-chart" width="400" height="200"></canvas>
+          <canvas id="engagement-chart" width="400" height="200"></canvas>
+        </div>
+      </div>
+
+
+      
+
+      <script src="script.js"></script>
+    </body>
+    </html>
+    
+
+  
+
+    <!-- jquery file link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

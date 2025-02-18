@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Plants</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Chatbot Icon */
+        .chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .chatbot-icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Chatbot Container */
+        #chatbot-container {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 400px;
+            height: 500px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        #chatbot-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient( #fcfcfc, #65b741);
+            color: #2e4a32;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2.5rem;
+            color: #56ee05;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container for Cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            width: 300px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #94e0ad;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-color: #62a16e;
+        }
+
+        /* Card Image */
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: filter 0.3s;
+        }
+
+        .card:hover img {
+            filter: brightness(0.9) saturate(1.2);
+        }
+
+        /* Card Content */
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #216353;
+            margin: 10px 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-description {
+            font-size: 1.5rem;
+            color: #4a704d;
+            font-size: medium;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        /* Button for More Info */
+        .card-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #85c99c;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .card-btn:hover {
+            background: #62a16e;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .card {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- logo name  -->
+        <a href="#" class="logo"><i class="fas fa-tree"></i>HERBVISTA</a>
+
+        <!-- navbar icons  -->
+        <div class="fas fa-bars"></div>
+        <!-- navbar link  -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="https://plant.id/">Identify</a></li>
+                <li><a href="https://herbcommunity.netlify.app/">Community</a></li>
+                <li><a href="streak.html">Streak</a></li>
+                <li><a href="exercise.html">Fitness</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="home">      
+        <h1 style="color: white;" class="heading">"Balance your life with yoga and nature’s remedies."</h1>
+
+     
+   
+
+    <!-- service section end  -->
+
+    <!-- Chatbot Floating Icon -->
+    <div class="chatbot-icon" onclick="toggleChatbot()">
+        <img src="images/logo.svg" alt="Chatbot Icon">
+    </div>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container">
+        <iframe 
+            src="https://www.chatbase.co/chatbot-iframe/MjjhT1QZ0nA_HlAsgUqBQ"
+            allow="autoplay; microphone"
+        ></iframe>
+    </div>
+
+    <!-- footer section -->
+    <section class="footer">
+        <!-- jquery file link  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- custom js file link  -->
+        <script src="./js/main.js"></script>
+
+        <!-- Chatbot Script -->
+        <script>
+            // Function to toggle the chatbot visibility
+            function toggleChatbot() {
+                const chatbotContainer = document.getElementById('chatbot-container');
+                if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+                    chatbotContainer.style.display = 'block';
+                } else {
+                    chatbotContainer.style.display = 'none';
+                }
+            }
+
+            // Close chatbot on outside click (optional)
+            document.addEventListener('click', (event) => {
+                const chatbotIcon = document.querySelector('.chatbot-icon');
+                const chatbotContainer = document.getElementById('chatbot-container');
+                if (!chatbotIcon.contains(event.target) && !chatbotContainer.contains(event.target)) {
+                    chatbotContainer.style.display = 'none';
+                }
+            });
+        </script>
+    </section>
+
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="images/ardh-halasanaa-and-halasana.jpg" alt="Tulsi">
+            <div class="card-content">
+                <h2 class="card-title">ARDH HALASANAA AND HALASANNA</h2>
+                <p class="card-description"> Improves digestion, enhances blood circulation, and relieves insomnia.
+                </p>
+               
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="images/Ardha Chandrasana (1)66dee2651c804.jpg" alt="Neem">
+            <div class="card-content">
+                <h2 class="card-title">ARDHA CHANDRASANA</h2>
+                <p class="card-description">Improves body balance, strengthens thighs and ankles, and enhances flexibility.
+                </p>
+               
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="images/ardhacakrasana.jpg" alt="Aloe Vera">
+            <div class="card-content">
+                <h2 class="card-title">ARDHACAKRASANA</h2>
+                <p class="card-description"> Strengthens back muscles, improves posture, and aids in relieving back pain.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="images/Ashwa Sanchlanasana (2)66ebfc61debe8.jpg" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">ASHWA SANCHLANASANA</h2>
+                <p class="card-description"> Enhances spinal flexibility, strengthens leg muscles, and improves lung capacity.
+                </p>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/bhujangasana.jpg" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">BHUJANGASANA</h2>
+                <p class="card-description">Tones the abdomen, strengthens the back and shoulders, and reduces stress.
+                </p>
+               
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/Chakrasan (1)66ebfcdb0629b.webp" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">CHAKRASANA</h2>
+                <p class="card-description">Strengthens back and leg muscles, improves flexibility, and relieves stress.
+                </p>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/Dhanurasana66ebfd796a97b.webp" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">DHANURASANA</h2>
+                <p class="card-description">Strengthens abdominal and back muscles, stimulates reproductive organs, and alleviates anxiety.
+                </p>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/Gomukhasan66ebfdd986c01.webp" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">GOMUKHASANA</h2>
+                <p class="card-description"> Eases back and shoulder stiffness, stimulates renal activity, and alleviates diabetes.
+                </p>
+
+            </div>
+        </div>  
+        <div class="card">
+            <img src="images/Halasana66ebfe6713513.webp" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">HALASANA</h2>
+                <p class="card-description">Improves digestion, enhances blood circulation, and relieves insomnia and anxiety.</p>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="imageS/mandukasana.jpg" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">MANDUKASANA</h2>
+                <p class="card-description"> Reduces abdominal fat, stimulates pancreatic activity, and alleviates stress.
+                </p>
+               
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/matyasana.jpg" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">MATYASANA</h2>
+                <p class="card-description">Strengthens neck and chest muscles, improves posture, and relieves respiratory issues.
+                </p>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/mayurasana.jpg" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">MAYURASANA</h2>
+                <p class="card-description">Tones digestive organs, detoxifies the body, and strengthens arms and shoulders.
+                </p>
+               
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/natrajasana.jpg" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">NATRAJASANA</h2>
+                <p class="card-description">Enhances body balance, aids in weight loss, and boosts digestion.
+                </p>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="imageS/salabhasana.jpg" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">SALABHASANA</h2>
+                <p class="card-description">Strengthens the lower back, increases flexibility, and enhances concentration.
+                </p>
+               
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/paschimottasana.jpg" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">PASCHIMOTTASANA</h2>
+                <p class="card-description">Improves spinal flexibility, combats diabetes, and tones abdominal organs.
+                </p>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/trikonasana.jpg" alt="Ashwagandha">
+            <div class="card-content">
+                <h2 class="card-title">TRIKONASANA</h2>
+                <p class="card-description">An adaptogen that helps reduce anxiety, improve stamina, and enhance overall health.</p>
+               
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

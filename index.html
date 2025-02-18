@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome file link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Herbvista</title>
+    <style>
+        /* Chatbot Icon */
+        .chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .chatbot-icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Chatbot Container */
+        #chatbot-container {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 400px;
+            height: 500px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        #chatbot-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- logo name  -->
+        <a href="#" class="logo"><i class="fas fa-tree"></i>HERBVISTA</a>
+
+        <!-- navbar icons  -->
+        <div class="fas fa-bars"></div>
+        <!-- navbar link  -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="https://plant.id/">Identify</a></li>
+                <li><a href="https://herbcommunity.netlify.app/">Community</a></li>
+                <li><a href="streak.html">Streak</a></li>
+                <li><a href="exercise.html">Fitness</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- home section start  -->
+
+    <section id="home" class="home">
+        <!-- home heading & text  -->
+        <h1 class="banner">Stress away, peace to stay <br> find your calm every day. </h1>
+        <h2 class="slogan">You Health,Your Garden all in one platform.</h2>
+    </section>
+
+    <!-- home section end  -->
+
+    <!-- about section start  -->
+
+    <section id="about" class="about">
+        <!-- about heading  -->
+        <h1 class="heading">Plants</h1>
+
+        <div class="row">
+            <!-- about heading & text  -->
+            <div class="images">
+                <img style="width: 300px; height:300;" src="./images/about.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h2>Herbal plants grow your Health</h2>
+                <p>Herbal plants are nature's gift, packed with healing properties and health benefits. From soothing ailments to enhancing well-being, herbs like tulsi, aloe vera, and turmeric have been used for centuries in traditional medicine</p>
+            </div>
+
+            <!-- about images  -->
+            <div class="images">
+                <img style="width: 400px; height:400px;" src="./images/ima.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="servics" class="service">
+        <!-- heading  -->
+        <h1 class="heading">Calm</h1>
+
+        <div class="row">
+            <!-- service images  -->
+            <div class="images">
+                <img style="width: 400px; height:400px;" src="./images/download.jpg" alt="">
+            </div>
+            <!-- service heading & text   -->
+            <div class="content">
+                <h2>Unwind your mind, one breath at a time.</h2>
+                <p>Life can be overwhelming, but finding calm doesn’t have to be. Imagine a space where stress melts away, and serenity takes over – that’s what our app offers.</p>
+                <a href="#"> <button class="btn">read more</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- service section end  -->
+
+    <!-- Chatbot Floating Icon -->
+    <div class="chatbot-icon" onclick="toggleChatbot()">
+        <img src="images/logo.svg" alt="Chatbot Icon">
+    </div>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container">
+        <iframe 
+            src="https://www.chatbase.co/chatbot-iframe/MjjhT1QZ0nA_HlAsgUqBQ"
+            allow="autoplay; microphone"
+        ></iframe>
+    </div>
+
+    <!-- footer section -->
+    <section class="footer">
+        <!-- jquery file link  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- custom js file link  -->
+        <script src="./js/main.js"></script>
+
+        <!-- Chatbot Script -->
+        <script>
+            // Function to toggle the chatbot visibility
+            function toggleChatbot() {
+                const chatbotContainer = document.getElementById('chatbot-container');
+                if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+                    chatbotContainer.style.display = 'block';
+                } else {
+                    chatbotContainer.style.display = 'none';
+                }
+            }
+
+            // Close chatbot on outside click (optional)
+            document.addEventListener('click', (event) => {
+                const chatbotIcon = document.querySelector('.chatbot-icon');
+                const chatbotContainer = document.getElementById('chatbot-container');
+                if (!chatbotIcon.contains(event.target) && !chatbotContainer.contains(event.target)) {
+                    chatbotContainer.style.display = 'none';
+                }
+            });
+        </script>
+    </section>
+
+</body>
+
+</html>
